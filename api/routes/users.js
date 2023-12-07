@@ -2,6 +2,6 @@ import express from "express"
 
 const router = express.Router()
 
-//TODO
+// Yet to be implemented
 
 export default router

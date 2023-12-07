@@ -64,15 +64,13 @@ const Write = () => {
             theme="snow"
             value={value}
             onChange={setValue}
+            placeholder="Write Something ..."
           />
         </div>
       </div>
       <div className="menu">
         <div className="item">
-          <h1>Publish</h1>
-          <span>
-            <b>Status: </b> Draft
-          </span>
+          <h1>STATUS</h1>
           <span>
             <b>Visibility: </b> Public
           </span>
@@ -87,79 +85,62 @@ const Write = () => {
             Upload Image
           </label>
           <div className="buttons">
-            <button>Save as a draft</button>
+
             <button onClick={handleClick}>Publish</button>
           </div>
         </div>
         <div className="item">
-          <h1>Category</h1>
-          <div className="cat">
-            <input
-              type="radio"
-              checked={cat === "art"}
-              name="cat"
-              value="art"
-              id="art"
-              onChange={(e) => setCat(e.target.value)}
-            />
-            <label htmlFor="art">Art</label>
-          </div>
-          <div className="cat">
-            <input
-              type="radio"
-              checked={cat === "science"}
-              name="cat"
-              value="science"
-              id="science"
-              onChange={(e) => setCat(e.target.value)}
-            />
-            <label htmlFor="science">Science</label>
-          </div>
-          <div className="cat">
-            <input
-              type="radio"
-              checked={cat === "technology"}
-              name="cat"
-              value="technology"
-              id="technology"
-              onChange={(e) => setCat(e.target.value)}
-            />
-            <label htmlFor="technology">Technology</label>
-          </div>
-          <div className="cat">
-            <input
-              type="radio"
-              checked={cat === "cinema"}
-              name="cat"
-              value="cinema"
-              id="cinema"
-              onChange={(e) => setCat(e.target.value)}
-            />
-            <label htmlFor="cinema">Cinema</label>
-          </div>
-          <div className="cat">
-            <input
-              type="radio"
-              checked={cat === "design"}
-              name="cat"
-              value="design"
-              id="design"
-              onChange={(e) => setCat(e.target.value)}
-            />
-            <label htmlFor="design">Design</label>
-          </div>
-          <div className="cat">
-            <input
-              type="radio"
-              checked={cat === "food"}
-              name="cat"
-              value="food"
-              id="food"
-              onChange={(e) => setCat(e.target.value)}
-            />
-            <label htmlFor="food">Food</label>
-          </div>
-        </div>
+  <h1>CATEGORY</h1>
+  <div className="cat">
+    <button
+      className={cat === "art" ? "active" : ""}
+      onClick={() => setCat("art")}
+    >
+      Art
+    </button>
+  </div>
+  <div className="cat">
+    <button
+      className={cat === "science" ? "active" : ""}
+      onClick={() => setCat("science")}
+    >
+      Science
+    </button>
+  </div>
+  <div className="cat">
+    <button
+      className={cat === "technology" ? "active" : ""}
+      onClick={() => setCat("technology")}
+    >
+      Technology
+    </button>
+  </div>
+  <div className="cat">
+    <button
+      className={cat === "cinema" ? "active" : ""}
+      onClick={() => setCat("cinema")}
+    >
+      Cinema
+    </button>
+  </div>
+  <div className="cat">
+    <button
+      className={cat === "design" ? "active" : ""}
+      onClick={() => setCat("design")}
+    >
+      Design
+    </button>
+  </div>
+  <div className="cat">
+    <button
+      className={cat === "food" ? "active" : ""}
+      onClick={() => setCat("food")}
+    >
+      Food
+    </button>
+  </div>
+</div>
+
       </div>
     </div>
   );

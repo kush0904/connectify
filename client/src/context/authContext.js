@@ -13,9 +13,19 @@ export const AuthContexProvider = ({ children }) => {
     setCurrentUser(res.data);
   };
 
-  const logout = async (inputs) => {
-    await axios.post("/auth/logout");
-    setCurrentUser(null);
+  const logout = async () => {
+    const confirmLogout = window.confirm('Are you sure you want to logout?');
+
+    if (confirmLogout) {
+      try {
+        await axios.post("/auth/logout");
+        setCurrentUser(null);
+        alert('Logged out successfully.');
+      } catch (error) {
+        console.error('Logout error:', error.message);
+        alert('An error occurred during logout.');
+      }
+    }
   };
 
   useEffect(() => {

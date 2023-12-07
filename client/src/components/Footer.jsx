@@ -1,12 +1,12 @@
 import React from "react";
-import Logo from "../img/logo.png";
+import Logo from "../img/logo.jpg";
 
 const Footer = () => {
   return (
     <footer>
-      <img src={Logo} alt="" />
+      <img src={Logo} alt="" className="logo"/>
       <span>
-        Made with ♥️ and <b>React.js</b>.
+      <b>Made with ♥️, React.js and MySQL</b>.
       </span>
     </footer>
   );
